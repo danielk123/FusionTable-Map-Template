@@ -163,8 +163,8 @@
         self.whereClause = self.locationColumn + " not equal to ''";
         
         //-----custom filters-----
-        if ( $("#Sselect_ΑΝΑΦΟΡΑ ΠΡΟΒΛΗΜΑΤΟΣ").val() != "")
-      self.whereClause += " AND 'ΑΝΑΦΟΡΑ ΠΡΟΒΛΗΜΑΤΟΣ' = '" + $("#select_ΑΝΑΦΟΡΑ ΠΡΟΒΛΗΜΑΤΟΣ").val() + "'";
+        if ( $("#select_type").val() != "")
+      self.whereClause += " AND 'ΑΝΑΦΟΡΑ ΠΡΟΒΛΗΜΑΤΟΣ' = '" + $("#select_type").val() + "'";
         //-----end of custom filters-----
 
         self.getgeoCondition(address, function (geoCondition) {
