@@ -163,8 +163,11 @@
         self.whereClause = self.locationColumn + " not equal to ''";
         
         //-----custom filters-----
-        if ( $("#select_type").val() != "")
-      self.whereClause += " AND 'ΑΝΑΦΟΡΑ ΠΡΟΒΛΗΜΑΤΟΣ' = '" + $("#select_type").val() + "'";
+        var type_column = "'ΑΝΑΦΟΡΑ ΠΡΟΒΛΗΜΑΤΟΣ'";
+var searchType = type_column + " IN (-1,";
+if ( $("#cbType1").is(':checked')) searchType += "ΑΥΤΟΚΙΝΗΤΑ ΕΓΚΑΤΑΛΕΙΜΕΝΑ-ΠΡΟΒΛΗΜΑ,";
+if ( $("#cbType2").is(':checked')) searchType += "ΔΕΝΔΡΑ ΕΠΙΚΙΝΔΥΝΑ-ΠΡΟΒΛΗΜΑ,";
+self.whereClause += " AND " + searchType.slice(0, searchType.length - 1) + ")";
         //-----end of custom filters-----
 
         self.getgeoCondition(address, function (geoCondition) {
