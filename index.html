@@ -58,12 +58,22 @@
 <h4>
   ΑΝΑΦΟΡΑ ΠΡΟΒΛΗΜΑΤΟΣ
 </h4>
-<label>
-  <select id='select_type'>
-    <option value=''>ΑΥΤΟΚΙΝΗΤΑ ΕΓΚΑΤΑΛΕΙΜΕΝΑ-ΠΡΟΒΛΗΜΑ</option>
-    <option value='1'>ΔΕΝΔΡΑ ΕΠΙΚΙΝΔΥΝΑ-ΠΡΟΒΛΗΜΑ</option>
-    </select>
-</label>
+<ul class='inputs-list unstyled'>
+  <li>
+    <label class='checkbox inline'>
+      <input type='checkbox' id='cbType1' />
+      <span class='filter-box filter-blue'></span>
+      ΑΥΤΟΚΙΝΗΤΑ ΕΓΚΑΤΑΛΕΙΜΕΝΑ
+    </label>
+  </li>
+  <li>
+    <label class='checkbox inline'>
+      <input type='checkbox' id='cbType2' />
+      <span class='filter-box filter-green'></span>
+     ΔΕΝΔΡΑ ΕΠΙΚΙΝΔΥΝΑ
+    </label>
+  </li>
+  </ul>
            
             <br />
             <a class='btn btn-primary' id='search' href='#'>
